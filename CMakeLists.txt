@@ -27,6 +27,7 @@ else()
     target_compile_features(${XV_BINDINGS_TARGET_NAME} INTERFACE cxx_std_11)
 endif()
 
+MESSAGE(STATUS "TEST")
 target_include_directories(
     xvega-bindings
     INTERFACE
