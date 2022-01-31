@@ -20,7 +20,7 @@ find_package(xvega REQUIRED)
 
 # Targeting
 # =========
-add_library(${XV_BINDINGS_TARGET_NAME} INTERFACE)
+add_library(xvega-bindings INTERFACE)
 if (${CMAKE_VERSION} VERSION_LESS "3.8.0")
     target_compile_features(${XV_BINDINGS_TARGET_NAME} INTERFACE cxx_range_for)
 else()
@@ -28,7 +28,7 @@ else()
 endif()
 
 target_include_directories(
-    ${XV_BINDINGS_TARGET_NAME}
+    xvega-bindings
     INTERFACE
     $<BUILD_INTERFACE:${XV_BINDINGS_INCLUDE_INSTALL_DIR}>
     $<INSTALL_INTERFACE:include>
