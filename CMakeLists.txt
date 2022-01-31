@@ -27,14 +27,14 @@ else()
     target_compile_features(${XV_BINDINGS_TARGET_NAME} INTERFACE cxx_std_11)
 endif()
 
-MESSAGE(STATUS "TEST")
+MESSAGE(STATUS "TEST2")
 target_include_directories(
     xvega-bindings
     INTERFACE
     $<BUILD_INTERFACE:${XV_BINDINGS_INCLUDE_INSTALL_DIR}>
     $<INSTALL_INTERFACE:include>
-    PUBLIC
-    ${xvega_INCLUDE_DIRS}
+    # PUBLIC
+    # ${xvega_INCLUDE_DIRS}
 )
 
 # Installing
